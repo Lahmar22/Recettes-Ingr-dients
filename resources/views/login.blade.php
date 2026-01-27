@@ -33,8 +33,8 @@
                     </div>
                 </a>
                 
-                <a href="inscription.html" class="text-gray-600 hover:text-orange-500 font-medium transition">
-                    Pas encore de compte ? <span class="text-orange-500 font-semibold">S'inscrire</span>
+                <a href="inscription" class="text-gray-600 hover:text-orange-500 font-medium transition">
+                    <span class="text-orange-500 font-semibold">S'inscrire</span>
                 </a>
             </div>
         </div>
@@ -42,58 +42,10 @@
 
     <!-- Main Content -->
     <div class="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-8 items-center">
+        <div class="max-w-xl w-full grid gap-8 items-center">
             
             <!-- Left Side - Illustration/Info -->
-            <div class="hidden md:block">
-                <div class="relative">
-                    <div class="absolute -top-10 -left-10 w-72 h-72 bg-orange-200 rounded-full blur-3xl opacity-30"></div>
-                    <div class="relative bg-white rounded-3xl p-10 shadow-2xl">
-                        <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                            <i class="fas fa-utensils text-white text-3xl"></i>
-                        </div>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                            Bon retour sur<br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">GastroShare</span>
-                        </h2>
-                        <p class="text-gray-600 mb-8 text-lg">
-                            Retrouvez votre communauté culinaire et continuez à partager vos meilleures recettes.
-                        </p>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-book-open text-orange-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">1,254+ Recettes</h4>
-                                    <p class="text-sm text-gray-500">Découvrez des créations uniques</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-users text-orange-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">12k+ Membres</h4>
-                                    <p class="text-sm text-gray-500">Une communauté passionnée</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-star text-orange-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Contenu Premium</h4>
-                                    <p class="text-sm text-gray-500">Accès exclusif aux meilleures recettes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
             <!-- Right Side - Login Form -->
             <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
@@ -167,49 +119,24 @@
                             <div class="w-full border-t border-gray-200"></div>
                         </div>
                         <div class="relative flex justify-center text-sm">
-                            <span class="px-4 bg-white text-gray-500">Ou continuer avec</span>
+                           
                         </div>
                     </div>
 
-                    <!-- Social Login -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <button 
-                            type="button"
-                            class="flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-200 rounded-xl hover:border-orange-500 hover:bg-orange-50 transition font-medium"
-                        >
-                            <i class="fab fa-google text-red-500 text-xl"></i>
-                            <span class="text-gray-700">Google</span>
-                        </button>
-                        <button 
-                            type="button"
-                            class="flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-200 rounded-xl hover:border-orange-500 hover:bg-orange-50 transition font-medium"
-                        >
-                            <i class="fab fa-facebook text-blue-600 text-xl"></i>
-                            <span class="text-gray-700">Facebook</span>
-                        </button>
-                    </div>
+                   
 
                     <!-- Sign Up Link -->
                     <div class="text-center mt-6">
                         <p class="text-gray-600">
                             Pas encore de compte ? 
-                            <a href="inscription.html" class="text-orange-500 hover:text-orange-600 font-semibold">
+                            <a href="inscription" class="text-orange-500 hover:text-orange-600 font-semibold">
                                 Créer un compte
                             </a>
                         </p>
                     </div>
                 </form>
 
-                <!-- Security Info -->
-                <div class="mt-8 p-4 bg-orange-50 rounded-xl border border-orange-100">
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-shield-alt text-orange-500 text-xl mt-1"></i>
-                        <div>
-                            <h4 class="font-semibold text-gray-900 text-sm mb-1">Connexion sécurisée</h4>
-                            <p class="text-xs text-gray-600">Vos données sont protégées par un cryptage SSL de niveau bancaire.</p>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -243,15 +170,7 @@
             }
         }
 
-        // Animation au scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.querySelector('form');
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                // Ajoutez ici votre logique de connexion
-                alert('Fonctionnalité de connexion à implémenter !');
-            });
-        });
+        
     </script>
 </body>
 </html>
