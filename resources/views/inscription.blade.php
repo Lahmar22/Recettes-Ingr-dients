@@ -36,8 +36,8 @@
                     </div>
                 </a>
                 
-                <a href="login.html" class="text-gray-600 hover:text-orange-500 font-medium transition">
-                    Déjà membre ? <span class="text-orange-500 font-semibold">Se connecter</span>
+                <a href="login" class="text-gray-600 hover:text-orange-500 font-medium transition">
+                    <span class="text-orange-500 font-semibold">Se connecter</span>
                 </a>
             </div>
         </div>
@@ -45,86 +45,8 @@
 
     <!-- Main Content -->
     <div class="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-8 items-center">
+        <div class="max-w-2xl w-full grid gap-8 items-center">
             
-            <!-- Left Side - Illustration/Info -->
-            <div class="hidden md:block order-2 md:order-1">
-                <div class="relative">
-                    <div class="absolute -top-10 -left-10 w-72 h-72 bg-orange-200 rounded-full blur-3xl opacity-30"></div>
-                    <div class="relative bg-white rounded-3xl p-10 shadow-2xl">
-                        <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                            <i class="fas fa-rocket text-white text-3xl"></i>
-                        </div>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                            Rejoignez<br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">GastroShare</span>
-                        </h2>
-                        <p class="text-gray-600 mb-8 text-lg">
-                            Créez votre compte gratuitement et accédez à une communauté culinaire passionnante.
-                        </p>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-check text-orange-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900 mb-1">Partagez vos recettes</h4>
-                                    <p class="text-sm text-gray-500">Publiez vos créations culinaires et inspirez la communauté</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-check text-orange-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900 mb-1">Découvrez des saveurs</h4>
-                                    <p class="text-sm text-gray-500">Explorez des milliers de recettes variées et originales</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-check text-orange-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900 mb-1">Échangez avec des chefs</h4>
-                                    <p class="text-sm text-gray-500">Rejoignez une communauté de passionnés et apprenez</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-check text-orange-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900 mb-1">100% Gratuit</h4>
-                                    <p class="text-sm text-gray-500">Aucun frais caché, profitez de toutes les fonctionnalités</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 p-4 bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl border border-orange-200">
-                            <p class="text-sm text-gray-700 italic">
-                                <i class="fas fa-quote-left text-orange-400 mr-2"></i>
-                                GastroShare a transformé ma façon de cuisiner. Je découvre chaque jour de nouvelles recettes incroyables !
-                                <i class="fas fa-quote-right text-orange-400 ml-2"></i>
-                            </p>
-                            <div class="flex items-center gap-3 mt-4">
-                                <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white font-bold">
-                                    ML
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-gray-900 text-sm">Marie Leblanc</p>
-                                    <p class="text-xs text-gray-500">Membre depuis 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- Right Side - Registration Form -->
             <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 order-1 md:order-2">
                 <div class="text-center mb-8">
@@ -203,15 +125,7 @@
                         </div>
                         
                         <!-- Password Strength Indicator -->
-                        <div class="mt-2">
-                            <div class="flex gap-1 mb-1">
-                                <div class="h-1 flex-1 bg-gray-200 rounded-full" id="strength1"></div>
-                                <div class="h-1 flex-1 bg-gray-200 rounded-full" id="strength2"></div>
-                                <div class="h-1 flex-1 bg-gray-200 rounded-full" id="strength3"></div>
-                                <div class="h-1 flex-1 bg-gray-200 rounded-full" id="strength4"></div>
-                            </div>
-                            <p class="text-xs text-gray-500" id="strengthText">Utilisez 8 caractères minimum avec majuscules et chiffres</p>
-                        </div>
+                        
                     </div>
 
                     <!-- Confirm Password -->
@@ -247,20 +161,7 @@
                     </div>
 
                     <!-- Terms & Conditions -->
-                    <div class="flex items-start">
-                        <input 
-                            type="checkbox" 
-                            id="terms"
-                            required
-                            class="w-4 h-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500 mt-1"
-                        >
-                        <label for="terms" class="ml-3 text-sm text-gray-600">
-                            J'accepte les 
-                            <a href="#" class="text-orange-500 hover:text-orange-600 font-semibold">conditions d'utilisation</a> 
-                            et la 
-                            <a href="#" class="text-orange-500 hover:text-orange-600 font-semibold">politique de confidentialité</a>
-                        </label>
-                    </div>
+                    
 
                     <!-- Newsletter -->
                     <div class="flex items-start">
@@ -288,33 +189,18 @@
                             <div class="w-full border-t border-gray-200"></div>
                         </div>
                         <div class="relative flex justify-center text-sm">
-                            <span class="px-4 bg-white text-gray-500">Ou s'inscrire avec</span>
+
                         </div>
                     </div>
 
                     <!-- Social Registration -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <button 
-                            type="button"
-                            class="flex items-center justify-center gap-2 px-4 py-3 border-2 border-gray-200 rounded-xl hover:border-orange-500 hover:bg-orange-50 transition font-medium"
-                        >
-                            <i class="fab fa-google text-red-500 text-xl"></i>
-                            <span class="text-gray-700 text-sm">Google</span>
-                        </button>
-                        <button 
-                            type="button"
-                            class="flex items-center justify-center gap-2 px-4 py-3 border-2 border-gray-200 rounded-xl hover:border-orange-500 hover:bg-orange-50 transition font-medium"
-                        >
-                            <i class="fab fa-facebook text-blue-600 text-xl"></i>
-                            <span class="text-gray-700 text-sm">Facebook</span>
-                        </button>
-                    </div>
+                    
 
                     <!-- Login Link -->
                     <div class="text-center mt-6">
                         <p class="text-gray-600">
                             Déjà membre ? 
-                            <a href="login.html" class="text-orange-500 hover:text-orange-600 font-semibold">
+                            <a href="login" class="text-orange-500 hover:text-orange-600 font-semibold">
                                 Se connecter
                             </a>
                         </p>
@@ -338,120 +224,14 @@
     </footer>
 
     <script>
-        function togglePassword(inputId) {
-            const passwordInput = document.getElementById(inputId);
-            const toggleIcon = inputId === 'password' ? document.getElementById('toggleIcon1') : document.getElementById('toggleIcon2');
+        
+           
+        
             
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                toggleIcon.classList.remove('fa-eye');
-                toggleIcon.classList.add('fa-eye-slash');
-            } else {
-                passwordInput.type = 'password';
-                toggleIcon.classList.remove('fa-eye-slash');
-                toggleIcon.classList.add('fa-eye');
-            }
-        }
+        
 
-        function checkPasswordStrength() {
-            const password = document.getElementById('password').value;
-            const strength1 = document.getElementById('strength1');
-            const strength2 = document.getElementById('strength2');
-            const strength3 = document.getElementById('strength3');
-            const strength4 = document.getElementById('strength4');
-            const strengthText = document.getElementById('strengthText');
-            
-            // Reset
-            [strength1, strength2, strength3, strength4].forEach(el => {
-                el.className = 'h-1 flex-1 bg-gray-200 rounded-full';
-            });
-            
-            if (password.length === 0) {
-                strengthText.textContent = 'Utilisez 8 caractères minimum avec majuscules et chiffres';
-                strengthText.className = 'text-xs text-gray-500';
-                return;
-            }
-            
-            let strength = 0;
-            
-            // Check length
-            if (password.length >= 8) strength++;
-            if (password.length >= 12) strength++;
-            
-            // Check for uppercase
-            if (/[A-Z]/.test(password)) strength++;
-            
-            // Check for numbers
-            if (/[0-9]/.test(password)) strength++;
-            
-            // Check for special characters
-            if (/[^A-Za-z0-9]/.test(password)) strength++;
-            
-            // Update UI
-            const bars = [strength1, strength2, strength3, strength4];
-            
-            if (strength <= 2) {
-                bars[0].classList.add('strength-weak');
-                if (strength >= 2) bars[1].classList.add('strength-weak');
-                strengthText.textContent = 'Mot de passe faible';
-                strengthText.className = 'text-xs text-red-500';
-            } else if (strength <= 4) {
-                bars[0].classList.add('strength-medium');
-                bars[1].classList.add('strength-medium');
-                if (strength >= 4) bars[2].classList.add('strength-medium');
-                strengthText.textContent = 'Mot de passe moyen';
-                strengthText.className = 'text-xs text-orange-500';
-            } else {
-                bars.forEach(bar => bar.classList.add('strength-strong'));
-                strengthText.textContent = 'Mot de passe fort';
-                strengthText.className = 'text-xs text-green-500';
-            }
-        }
-
-        function checkPasswordMatch() {
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-            const errorMsg = document.getElementById('passwordMatchError');
-            const successMsg = document.getElementById('passwordMatchSuccess');
-            
-            if (confirmPassword.length === 0) {
-                errorMsg.classList.add('hidden');
-                successMsg.classList.add('hidden');
-                return;
-            }
-            
-            if (password !== confirmPassword) {
-                errorMsg.classList.remove('hidden');
-                successMsg.classList.add('hidden');
-            } else {
-                errorMsg.classList.add('hidden');
-                successMsg.classList.remove('hidden');
-            }
-        }
-
-        // Form submission
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-            const terms = document.getElementById('terms').checked;
-            
-            if (password !== confirmPassword) {
-                alert('Les mots de passe ne correspondent pas !');
-                return;
-            }
-            
-            if (!terms) {
-                alert('Veuillez accepter les conditions d\'utilisation');
-                return;
-            }
-            
-            // Ajoutez ici votre logique d'inscription
-            alert('Inscription réussie ! Bienvenue sur GastroShare 🎉');
-            // Redirection vers la page de connexion ou d'accueil
-            // window.location.href = 'login.html';
-        });
+        
+        
     </script>
 </body>
 </html>
