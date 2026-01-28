@@ -57,7 +57,8 @@
                     <p class="text-gray-500">Connectez-vous à votre compte GastroShare</p>
                 </div>
 
-                <form class="space-y-6">
+                <form action="logincontroller" method="POST" class="space-y-6">
+                    @csrf
                     <!-- Email -->
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2">
@@ -65,6 +66,7 @@
                         </label>
                         <input 
                             type="email" 
+                            name="email"
                             required
                             class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition"
                             placeholder="votre@email.com"
@@ -79,6 +81,7 @@
                         <div class="relative">
                             <input 
                                 type="password" 
+                                name="password" 
                                 id="password"
                                 required
                                 class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition pr-12"
