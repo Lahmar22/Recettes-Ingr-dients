@@ -57,14 +57,29 @@
                     <p class="text-gray-500">Créez votre compte GastroShare</p>
                 </div>
 
-                <form class="space-y-5" id="registrationForm">
+                <form method="POST" action="inscriptionUser" class="space-y-5" id="registrationForm">
+                    @csrf
                     <!-- Nom complet -->
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2">
-                            <i class="fas fa-user mr-2 text-orange-500"></i>Nom complet
+                            <i class="fas fa-user mr-2 text-orange-500"></i>Nom
                         </label>
                         <input 
                             type="text" 
+                            name="nom"
+                            id="fullname"
+                            required
+                            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition"
+                            placeholder="Jean Dupont"
+                        >
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-user mr-2 text-orange-500"></i>Prenom
+                        </label>
+                        <input 
+                            type="text" 
+                            name="prenom"
                             id="fullname"
                             required
                             class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition"
@@ -79,6 +94,7 @@
                         </label>
                         <input 
                             type="email" 
+                            name="email"
                             id="email"
                             required
                             class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition"
@@ -89,10 +105,11 @@
                     <!-- Username -->
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2">
-                            <i class="fas fa-at mr-2 text-orange-500"></i>Nom d'utilisateur
+                            <i class="fas fa-at mr-2 text-orange-500"></i>spescialise
                         </label>
                         <input 
                             type="text" 
+                            name="spescialise"
                             id="username"
                             required
                             class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition"
@@ -109,9 +126,9 @@
                         <div class="relative">
                             <input 
                                 type="password" 
+                                name="password"
                                 id="password"
                                 required
-                                oninput="checkPasswordStrength()"
                                 class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition pr-12"
                                 placeholder="••••••••"
                             >
@@ -128,54 +145,8 @@
                         
                     </div>
 
-                    <!-- Confirm Password -->
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">
-                            <i class="fas fa-lock mr-2 text-orange-500"></i>Confirmer le mot de passe
-                        </label>
-                        <div class="relative">
-                            <input 
-                                type="password" 
-                                id="confirmPassword"
-                                required
-                                oninput="checkPasswordMatch()"
-                                class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition pr-12"
-                                placeholder="••••••••"
-                            >
-                            <button 
-                                type="button" 
-                                onclick="togglePassword('confirmPassword')"
-                                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                            >
-                                <i class="fas fa-eye" id="toggleIcon2"></i>
-                            </button>
-                        </div>
-                        <p class="text-xs mt-1 hidden" id="passwordMatchError">
-                            <i class="fas fa-exclamation-circle text-red-500 mr-1"></i>
-                            <span class="text-red-500">Les mots de passe ne correspondent pas</span>
-                        </p>
-                        <p class="text-xs mt-1 hidden" id="passwordMatchSuccess">
-                            <i class="fas fa-check-circle text-green-500 mr-1"></i>
-                            <span class="text-green-500">Les mots de passe correspondent</span>
-                        </p>
-                    </div>
-
-                    <!-- Terms & Conditions -->
                     
-
-                    <!-- Newsletter -->
-                    <div class="flex items-start">
-                        <input 
-                            type="checkbox" 
-                            id="newsletter"
-                            class="w-4 h-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500 mt-1"
-                        >
-                        <label for="newsletter" class="ml-3 text-sm text-gray-600">
-                            Je souhaite recevoir les actualités et les meilleures recettes par email
-                        </label>
-                    </div>
-
-                    <!-- Submit Button -->
+                    
                     <button 
                         type="submit"
                         class="w-full gradient-bg text-white py-4 rounded-xl font-bold hover:shadow-xl transition transform hover:scale-105 text-lg"
@@ -193,10 +164,6 @@
                         </div>
                     </div>
 
-                    <!-- Social Registration -->
-                    
-
-                    <!-- Login Link -->
                     <div class="text-center mt-6">
                         <p class="text-gray-600">
                             Déjà membre ? 
@@ -210,28 +177,8 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="flex justify-center gap-6 mb-4 text-sm text-gray-600">
-                <a href="#" class="hover:text-orange-500 transition">À propos</a>
-                <a href="#" class="hover:text-orange-500 transition">Confidentialité</a>
-                <a href="#" class="hover:text-orange-500 transition">Conditions</a>
-                <a href="#" class="hover:text-orange-500 transition">Contact</a>
-            </div>
-            <p class="text-gray-500 text-sm">&copy; 2025 GastroShare. Tous droits réservés.</p>
-        </div>
-    </footer>
+    
 
-    <script>
-        
-           
-        
-            
-        
-
-        
-        
-    </script>
+    
 </body>
 </html>
