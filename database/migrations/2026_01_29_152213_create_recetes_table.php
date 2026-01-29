@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('image_recete');
             $table->foreignId('utilisateurs_id')->constrained('utilisateurs')->onDelete('cascade');
+            $table->foreignId('categories_id')->constrained('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
