@@ -15,8 +15,8 @@ class loginContoller extends Controller
         $user = Utilisateur::where('email_user', $request->email)->first();
 
         if (!$user) {
-        return back()->with('error', 'Email not found');
-    }
+            return back()->with('error', 'Email not found');
+        }
 
 
         if (!Hash::check($request->password, $user->password_user)) {

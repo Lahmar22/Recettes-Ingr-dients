@@ -4,6 +4,9 @@
         exit();
     }
 @endphp
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -91,6 +94,15 @@
     </nav>
 
     <main class="max-w-7xl mx-auto px-4 py-12">
+
+    @if($recetes->isEmpty())
+    <p>No recipes found.</p>
+    @else
+        @foreach($recetes as $recete)
+            <h3>{{ $recete->titre_recete}}</h3>
+        @endforeach
+    @endif
+        
         
         <!-- Header Section -->
         <div class="text-center mb-12">

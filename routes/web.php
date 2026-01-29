@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\loginContoller;
 use App\Http\Controllers\Logout;
+use App\Http\Controllers\ReceteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InscriptionController;
 
@@ -27,11 +28,13 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
-Route::get('recete', function () {
-    return view('recete');
-});
+
 
 Route::post('/inscriptionUser', [InscriptionController::class, 'store']);
 Route::post('/logincontroller', [loginContoller::class, 'login']);
 
 Route::post('/logout', [Logout::class, 'logout']);
+
+Route::get('/recete', [ReceteController::class, 'show']);
+
+Route::post('/createRecete', [ReceteController::class, 'create']);
